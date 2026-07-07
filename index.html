@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Obsidian Studio Designs — Website &amp; App Development</title>
+<meta name="description" content="Obsidian Studio Designs — premium website design and app development. Dark. Bold. Golden.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Outfit:wght@200;300;400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+</head>
+<body>
+
+<!-- Gold scroll progress -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- Gold particle canvas -->
+<canvas id="particles"></canvas>
+
+<!-- Custom cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <a href="#home" class="nav-logo">
+    <span class="logo-gem">◆</span>
+    <span class="logo-text">OBSIDIAN<span class="logo-sub">STUDIO DESIGNS</span></span>
+  </a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#web-design">Web Design</a></li>
+    <li><a href="#app-development">App Development</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ============ HERO / LANDING (VIDEO) ============ -->
+<header class="hero" id="home">
+  <div class="hero-video-wrap" id="heroVideoWrap">
+    <video class="hero-video" autoplay muted loop playsinline poster="">
+      <source src="landing-clean.mp4" type="video/mp4">
+    </video>
+    <div class="hero-veil"></div>
+  </div>
+
+  <div class="hero-content" id="heroContent">
+    <p class="hero-kicker reveal-up">WEBSITE &amp; APP DEVELOPMENT</p>
+    <h1 class="hero-title">
+      <span class="line reveal-up d1">OBSIDIAN</span>
+      <span class="line gold-shimmer reveal-up d2">STUDIO DESIGNS</span>
+    </h1>
+    <p class="hero-tag reveal-up d3">Forged in darkness. Finished in gold.</p>
+    <div class="hero-actions reveal-up d4">
+      <a href="#devices" class="btn btn-gold">Explore Our Craft</a>
+      <a href="#contact" class="btn btn-ghost">Start a Project</a>
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+    <span>Scroll</span>
+  </div>
+</header>
+
+<!-- ============ FLOATING 3D DEVICES ============ -->
+<section class="devices" id="devices">
+  <div class="section-head tilt-in">
+    <p class="section-kicker">CHOOSE YOUR PATH</p>
+    <h2 class="section-title split">Two Crafts. <span class="gold">One Standard.</span></h2>
+    <p class="section-sub">Click a device to explore what we build.</p>
+  </div>
+
+  <div class="devices-stage">
+
+    <!-- 3D LAPTOP → website design -->
+    <a href="#web-design" class="device device-laptop" id="deviceLaptop" aria-label="Go to Website Design section">
+      <div class="dev-float">
+        <div class="l3d spin3d" data-spin="-34">
+          <div class="l3d-lid">
+            <div class="l3d-back"></div>
+            <div class="l3d-screen">
+              <div class="scr-bar"><i></i><i></i><i></i><span class="scr-url">obsidianstudio.designs</span></div>
+              <div class="scr-body">
+                <div class="scr-nav"><b>◆ OBSIDIAN</b><span><u></u><u></u><u></u></span></div>
+                <div class="scr-hero">
+                  <em>WEBSITES THAT DOMINATE</em>
+                  <div class="scr-sub"></div>
+                  <div class="scr-cta"></div>
+                </div>
+                <div class="scr-cards"><s></s><s></s><s></s></div>
+              </div>
+              <div class="scr-boot"><pre class="scr-code"></pre></div>
+              <div class="scr-glare"></div>
+            </div>
+          </div>
+          <div class="l3d-base">
+            <div class="l3d-keys"></div>
+            <div class="l3d-pad"></div>
+          </div>
+        </div>
+        <div class="device-shadow"></div>
+      </div>
+      <div class="device-label">
+        <span class="device-label-title">WEBSITE DESIGN</span>
+        <span class="device-label-hint">Click to explore ↓</span>
+      </div>
+    </a>
+
+    <!-- 3D PHONE → app development -->
+    <a href="#app-development" class="device device-phone" id="devicePhone" aria-label="Go to App Development section">
+      <div class="dev-float">
+        <div class="p3d spin3d" data-spin="40">
+          <i class="p3d-e"></i><i class="p3d-e"></i><i class="p3d-e"></i><i class="p3d-e"></i>
+          <i class="p3d-e"></i><i class="p3d-e"></i><i class="p3d-e"></i>
+          <div class="p3d-back"><span class="p3d-cam"></span><span class="p3d-logo">◆</span></div>
+          <div class="p3d-front">
+            <div class="pscr">
+              <div class="pscr-status"><span>9:41</span><span class="pscr-notch"></span><span>▮▮▮</span></div>
+              <div class="pscr-head"><b>◆</b> Obsidian App</div>
+              <div class="pscr-card"></div>
+              <div class="pscr-rows"><i></i><i></i><i></i></div>
+              <div class="pscr-fab">+</div>
+              <div class="pscr-nav"><i></i><i></i><i></i><i></i></div>
+            </div>
+            <div class="pscr-boot">
+              <div class="bin-rain"></div>
+              <div class="boot-status">LOADING APP <i>0%</i><span class="boot-bar"><span></span></span></div>
+            </div>
+            <div class="scr-glare"></div>
+          </div>
+        </div>
+        <div class="device-shadow device-shadow-sm"></div>
+      </div>
+      <div class="device-label">
+        <span class="device-label-title">APP DEVELOPMENT</span>
+        <span class="device-label-hint">Click to explore ↓</span>
+      </div>
+    </a>
+
+  </div>
+</section>
+
+<!-- ============ MARQUEE ============ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>WEBSITES ◆ APPS ◆ E-COMMERCE ◆ UI/UX ◆ BRANDING ◆ SEO ◆ HOSTING ◆ MAINTENANCE ◆&nbsp;</span>
+    <span>WEBSITES ◆ APPS ◆ E-COMMERCE ◆ UI/UX ◆ BRANDING ◆ SEO ◆ HOSTING ◆ MAINTENANCE ◆&nbsp;</span>
+  </div>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="services" id="services">
+  <div class="section-head tilt-in">
+    <p class="section-kicker">WHAT WE DO</p>
+    <h2 class="section-title split">Our <span class="gold">Services</span></h2>
+    <p class="section-sub">Every pixel deliberate. Every line of code precise. Hover a card — watch it come alive.</p>
+  </div>
+
+  <div class="services-grid">
+
+    <article class="service-card tilt-card tilt-in">
+      <div class="icon3d">
+        <div class="obj3d o-screens">
+          <span class="scr-p p1"></span>
+          <span class="scr-p p2"></span>
+          <span class="scr-p p3"></span>
+        </div>
+      </div>
+      <h3>Website Design</h3>
+      <p>Bespoke, responsive websites that command attention — from landing pages to full corporate sites.</p>
+      <a href="#web-design" class="service-link">Learn more →</a>
+    </article>
+
+    <article class="service-card tilt-card tilt-in">
+      <div class="icon3d">
+        <div class="obj3d o-mini">
+          <i class="mp-e"></i><i class="mp-e"></i><i class="mp-e"></i><i class="mp-e"></i><i class="mp-e"></i>
+          <span class="mp-b">◆</span>
+          <span class="mp-f"><b></b></span>
+        </div>
+      </div>
+      <h3>App Development</h3>
+      <p>Native and cross-platform mobile apps built for performance, polish, and real business results.</p>
+      <a href="#app-development" class="service-link">Learn more →</a>
+    </article>
+
+    <article class="service-card tilt-card tilt-in">
+      <div class="icon3d">
+        <div class="obj3d o-gem">
+          <b class="gp"></b><b class="gp"></b><b class="gp"></b>
+        </div>
+      </div>
+      <h3>UI / UX Design</h3>
+      <p>Interfaces that feel effortless. Research-driven design systems your users will love to touch.</p>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </article>
+
+    <article class="service-card tilt-card tilt-in">
+      <div class="icon3d">
+        <div class="obj3d o-coin">
+          <i class="cn-e"></i><i class="cn-e"></i><i class="cn-e"></i><i class="cn-e"></i><i class="cn-e"></i>
+          <span class="cn-f">R</span>
+          <span class="cn-b">◆</span>
+        </div>
+      </div>
+      <h3>E-Commerce</h3>
+      <p>Online stores engineered to convert — secure payments, inventory, and a checkout that just works.</p>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </article>
+
+    <article class="service-card tilt-card tilt-in">
+      <div class="icon3d">
+        <div class="obj3d o-bars">
+          <i class="bar b1"></i><i class="bar b2"></i><i class="bar b3"></i>
+          <span class="bar-arrow">↗</span>
+        </div>
+      </div>
+      <h3>SEO &amp; Performance</h3>
+      <p>Be found. Blazing-fast load times and search optimisation that puts you above the fold.</p>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </article>
+
+    <article class="service-card tilt-card tilt-in">
+      <div class="icon3d">
+        <div class="obj3d o-gear">
+          <b>⚙</b><b>⚙</b><b>⚙</b><b>⚙</b><b>⚙</b><b>⚙</b>
+        </div>
+      </div>
+      <h3>Care &amp; Maintenance</h3>
+      <p>Updates, security, backups and support — we keep your digital presence flawless, always.</p>
+      <a href="#contact" class="service-link">Enquire →</a>
+    </article>
+
+  </div>
+</section>
+
+<!-- ============ WEB DESIGN ============ -->
+<section class="feature feature-web" id="web-design">
+  <div class="feature-media">
+    <div class="dev-scale dev-scale-laptop">
+      <div class="l3d spin3d" data-spin="-46">
+        <div class="l3d-lid">
+          <div class="l3d-back"></div>
+          <div class="l3d-screen">
+            <div class="scr-bar"><i></i><i></i><i></i><span class="scr-url">yourbusiness.co.za</span></div>
+            <div class="scr-body">
+              <div class="scr-nav"><b>◆ YOUR BRAND</b><span><u></u><u></u><u></u></span></div>
+              <div class="scr-hero">
+                <em>YOUR EMPIRE ONLINE</em>
+                <div class="scr-sub"></div>
+                <div class="scr-cta"></div>
+              </div>
+              <div class="scr-cards"><s></s><s></s><s></s></div>
+            </div>
+            <div class="scr-glare"></div>
+          </div>
+        </div>
+        <div class="l3d-base">
+          <div class="l3d-keys"></div>
+          <div class="l3d-pad"></div>
+        </div>
+      </div>
+      <div class="device-shadow"></div>
+    </div>
+  </div>
+  <div class="feature-body tilt-in">
+    <p class="section-kicker">01 — WEBSITE DESIGN</p>
+    <h2 class="section-title split">Websites that <span class="gold">Dominate</span></h2>
+    <p>Your website is your empire's front gate. We design and build immersive, lightning-fast sites that turn visitors into believers — and believers into clients.</p>
+    <ul class="feature-list">
+      <li><span class="tick">◆</span> Custom design — never templates</li>
+      <li><span class="tick">◆</span> Mobile-first, responsive on every screen</li>
+      <li><span class="tick">◆</span> Blazing performance &amp; SEO built in</li>
+      <li><span class="tick">◆</span> CMS so you stay in control</li>
+      <li><span class="tick">◆</span> Hosting, domains &amp; email — handled</li>
+    </ul>
+    <a href="#contact" class="btn btn-gold">Build My Website</a>
+  </div>
+</section>
+
+<!-- ============ APP DEVELOPMENT ============ -->
+<section class="feature feature-app" id="app-development">
+  <div class="feature-body tilt-in">
+    <p class="section-kicker">02 — APP DEVELOPMENT</p>
+    <h2 class="section-title split">Apps that <span class="gold">Perform</span></h2>
+    <p>From concept to app store, we craft mobile experiences with obsidian-solid engineering and gold-standard design. iOS, Android, or both — shipped fast, built to last.</p>
+    <ul class="feature-list">
+      <li><span class="tick">◆</span> iOS &amp; Android — native feel everywhere</li>
+      <li><span class="tick">◆</span> Cross-platform builds that save budget</li>
+      <li><span class="tick">◆</span> Secure APIs &amp; cloud backends</li>
+      <li><span class="tick">◆</span> App Store &amp; Play Store launch support</li>
+      <li><span class="tick">◆</span> Analytics, updates &amp; growth support</li>
+    </ul>
+    <a href="#contact" class="btn btn-gold">Build My App</a>
+  </div>
+  <div class="feature-media">
+    <div class="dev-scale dev-scale-phone">
+      <div class="p3d spin3d" data-spin="52">
+        <i class="p3d-e"></i><i class="p3d-e"></i><i class="p3d-e"></i><i class="p3d-e"></i>
+        <i class="p3d-e"></i><i class="p3d-e"></i><i class="p3d-e"></i>
+        <div class="p3d-back"><span class="p3d-cam"></span><span class="p3d-logo">◆</span></div>
+        <div class="p3d-front">
+          <div class="pscr">
+            <div class="pscr-status"><span>9:41</span><span class="pscr-notch"></span><span>▮▮▮</span></div>
+            <div class="pscr-head"><b>◆</b> Your App</div>
+            <div class="pscr-card"></div>
+            <div class="pscr-rows"><i></i><i></i><i></i></div>
+            <div class="pscr-fab">+</div>
+            <div class="pscr-nav"><i></i><i></i><i></i><i></i></div>
+          </div>
+          <div class="scr-glare"></div>
+        </div>
+      </div>
+      <div class="device-shadow device-shadow-sm"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="process">
+  <div class="section-head tilt-in">
+    <p class="section-kicker">HOW WE WORK</p>
+    <h2 class="section-title split">From <span class="gold">Vision</span> to <span class="gold">Launch</span></h2>
+  </div>
+  <div class="process-track">
+    <div class="process-step tilt-in"><span class="step-num">01</span><h3>Discover</h3><p>We listen. Your goals, your market, your vision — mapped in detail.</p></div>
+    <div class="process-step tilt-in"><span class="step-num">02</span><h3>Design</h3><p>Wireframes to polished visuals. You approve every step.</p></div>
+    <div class="process-step tilt-in"><span class="step-num">03</span><h3>Develop</h3><p>Clean, modern code. Tested on real devices, built to scale.</p></div>
+    <div class="process-step tilt-in"><span class="step-num">04</span><h3>Deliver</h3><p>Launch day and beyond — support, updates and growth.</p></div>
+  </div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="contact" id="contact">
+  <div class="contact-card tilt-in">
+    <p class="section-kicker">LET'S BUILD</p>
+    <h2 class="section-title split">Start Your <span class="gold">Project</span></h2>
+    <p class="section-sub">One call. One email. That's all it takes to begin.</p>
+
+    <div class="contact-methods">
+      <a href="tel:0769874432" class="contact-method tilt-card">
+        <span class="medal">
+          <span class="medal-ring"></span>
+          <span class="medal-core"><b class="ring-anim">✆</b></span>
+          <span class="medal-orbit"><i>◆</i></span>
+        </span>
+        <span class="contact-label">Call us</span>
+        <span class="contact-value">076 987 4432</span>
+      </a>
+      <a href="mailto:obsidianstudiodesigns@gmail.com" class="contact-method tilt-card">
+        <span class="medal">
+          <span class="medal-ring"></span>
+          <span class="medal-core"><b class="mail-anim">✉</b></span>
+          <span class="medal-orbit"><i>◆</i></span>
+        </span>
+        <span class="contact-label">Email us</span>
+        <span class="contact-value">obsidianstudiodesigns@gmail.com</span>
+      </a>
+      <a href="https://wa.me/27769874432?text=Hi%20Obsidian%20Studio%20Designs!%20I%27d%20like%20to%20chat%20about%20a%20project." target="_blank" rel="noopener" class="contact-method tilt-card wa-method">
+        <span class="medal medal-wa">
+          <span class="medal-ring"></span>
+          <span class="medal-core"><b class="wa-anim"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg></b></span>
+          <span class="medal-orbit"><i>◆</i></span>
+        </span>
+        <span class="contact-label">WhatsApp us</span>
+        <span class="contact-value">076 987 4432</span>
+      </a>
+    </div>
+
+    <!-- ============ ENQUIRY FORM ============ -->
+    <form class="contact-form" id="contactForm"
+          action="https://formsubmit.co/obsidianstudiodesigns@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="✦ New project enquiry — Obsidian Studio Designs">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+
+      <p class="form-title">Or send us the details — we'll come back to you within 24 hours.</p>
+
+      <div class="form-grid">
+        <label class="form-field">
+          <span>Your name *</span>
+          <input type="text" name="name" placeholder="e.g. Nadia" required>
+        </label>
+        <label class="form-field">
+          <span>Email address *</span>
+          <input type="email" name="email" placeholder="you@email.com" required>
+        </label>
+        <label class="form-field">
+          <span>Phone number</span>
+          <input type="tel" name="phone" placeholder="0XX XXX XXXX">
+        </label>
+        <label class="form-field">
+          <span>What do you need?</span>
+          <select name="service">
+            <option>Website Design</option>
+            <option>App Development</option>
+            <option>E-Commerce Store</option>
+            <option>UI / UX Design</option>
+            <option>SEO &amp; Performance</option>
+            <option>Care &amp; Maintenance</option>
+            <option>Something else</option>
+          </select>
+        </label>
+        <label class="form-field form-field-full">
+          <span>Tell us about your project *</span>
+          <textarea name="message" rows="5" placeholder="What are we building together?" required></textarea>
+        </label>
+      </div>
+
+      <button type="submit" class="btn btn-gold form-submit" id="formSubmitBtn">Send Message ✦</button>
+      <p class="form-note">Your message goes straight to <b>obsidianstudiodesigns@gmail.com</b></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="footer-logo"><span class="logo-gem">◆</span> OBSIDIAN STUDIO DESIGNS</div>
+  <p>Websites ◆ Apps ◆ Design</p>
+  <p class="footer-contact">076 987 4432 · obsidianstudiodesigns@gmail.com · <a href="https://wa.me/27769874432" target="_blank" rel="noopener" class="footer-wa">WhatsApp us</a></p>
+  <p class="footer-copy">© 2026 Obsidian Studio Designs. All rights reserved.</p>
+</footer>
+
+<!-- Floating WhatsApp button -->
+<a href="https://wa.me/27769874432?text=Hi%20Obsidian%20Studio%20Designs!%20I%27d%20like%20to%20chat%20about%20a%20project."
+   target="_blank" rel="noopener" class="wa-float" aria-label="Chat with us on WhatsApp">
+  <span class="wa-tip">Chat with us on WhatsApp</span>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<script src="script.js"></script>
+</body>
+</html>

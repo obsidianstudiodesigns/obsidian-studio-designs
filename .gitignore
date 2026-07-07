@@ -1,0 +1,12 @@
+# source assets not used by the live site
+Landing Page.mp4
+Laptop.png
+Smart Phone.png
+laptop-cut.png
+phone-cut.png
+
+# client deliverable (single-file build)
+Obsidian-Studio-Designs.html
+
+# local tooling
+.claude/
