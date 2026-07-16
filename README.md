@@ -2,7 +2,7 @@
 
 Dark & gold 3D interactive website for Obsidian Studio Designs — website and app development.
 
-**Live site:** https://obsidianstudiodesigns.github.io/obsidian-studio-designs/
+**Live site:** https://obsidianstudiodesigns.co.za
 
 ## Features
 
