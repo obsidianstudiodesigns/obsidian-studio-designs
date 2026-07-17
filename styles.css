@@ -18,13 +18,22 @@
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+/* The 3D reveal animations project a wider box than their layout width
+   (perspective + rotateX), so clip sideways: no horizontal scroll or black
+   stripe on phones. `clip` keeps position:sticky working; `hidden` is the
+   fallback for older browsers. */
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-x: clip;
+}
 
 body {
   background: var(--obsidian);
   color: var(--ink);
   font-family: var(--font-body);
   overflow-x: hidden;
+  overflow-x: clip;
   line-height: 1.6;
 }
 
@@ -970,7 +979,9 @@ section { position: relative; z-index: 3; }
 /* ============ FEATURES (web / app) ============ */
 .feature {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  /* minmax(0,...) lets the track shrink below the 460px 3D laptop's layout
+     width — transform:scale() shrinks it visually but not its layout box. */
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   gap: clamp(2rem, 6vw, 5rem);
   align-items: center;
   max-width: 1240px;
@@ -990,6 +1001,7 @@ section { position: relative; z-index: 3; }
   display: flex;
   justify-content: center;
   align-items: center;
+  max-width: 100%;
 }
 .feature-body p { color: var(--ink-dim); font-weight: 300; margin-top: 1.2rem; font-size: 1.02rem; }
 .feature-body .section-kicker { margin-bottom: .8rem; }
@@ -1702,7 +1714,7 @@ section { position: relative; z-index: 3; }
   .dev-scale-laptop { transform: scale(.82); }
 }
 @media (max-width: 900px) {
-  .feature { grid-template-columns: 1fr; }
+  .feature { grid-template-columns: minmax(0, 1fr); }
   .feature-app .feature-media { order: -1; }
   .feature-web .feature-media { justify-self: center; }
 }
