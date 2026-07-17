@@ -147,6 +147,8 @@
   var ticking = false;
 
   function onScroll() {
+    // Runs directly (not via rAF) so content still reveals if frames are throttled.
+    revealVisible();
     if (!ticking) {
       requestAnimationFrame(applyScroll);
       ticking = true;
@@ -189,21 +191,45 @@
   window.addEventListener('resize', onScroll, { passive: true });
   applyScroll();
 
-  /* ---------- Scroll reveal (3D tilt-in) ---------- */
+  /* ---------- Scroll reveal (3D tilt-in) ----------
+     These elements start at opacity:0, so anything that stops the reveal from
+     firing hides real content (contact details, the enquiry form). Two
+     independent mechanisms run so a failure in either still shows the content:
+       1. IntersectionObserver, threshold 0 — fire on ANY overlap. A ratio-based
+          threshold is unusable here: the 3D reveal projects a box far bigger
+          than the element, so a tall section's ratio can never reach a
+          percentage on a narrow screen and it would stay invisible forever.
+       2. A direct geometry check on scroll, in case the observer never fires. */
+  var revealTargets = Array.prototype.slice.call(document.querySelectorAll('.tilt-in'));
+
+  function revealVisible() {
+    if (!revealTargets || !revealTargets.length) return;
+    var vh = window.innerHeight;
+    revealTargets = revealTargets.filter(function (el) {
+      var r = el.getBoundingClientRect();
+      if (r.top < vh - 40 && r.bottom > 0) {
+        el.classList.add('in-view');
+        return false;
+      }
+      return true;
+    });
+  }
+
   var observer = new IntersectionObserver(
     function (entries) {
       entries.forEach(function (entry) {
         if (entry.isIntersecting) {
           entry.target.classList.add('in-view');
           observer.unobserve(entry.target);
+          var i = revealTargets.indexOf(entry.target);
+          if (i > -1) revealTargets.splice(i, 1);
         }
       });
     },
-    { threshold: 0.15, rootMargin: '0px 0px -40px 0px' }
+    { threshold: 0, rootMargin: '0px 0px -60px 0px' }
   );
-  document.querySelectorAll('.tilt-in').forEach(function (el) {
-    observer.observe(el);
-  });
+  revealTargets.forEach(function (el) { observer.observe(el); });
+  revealVisible();
 
   /* ---------- Smooth scroll helper ---------- */
   function smoothTo(sel) {
