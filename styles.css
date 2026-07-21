@@ -817,6 +817,28 @@ section { position: relative; z-index: 3; }
 }
 .device:hover .device-label-hint { opacity: 1; transform: translateY(0); }
 
+/* ============ INTRO / WHY ============ */
+.intro {
+  padding: clamp(4rem, 8vw, 6.5rem) clamp(1.2rem, 4vw, 3rem);
+  background:
+    radial-gradient(ellipse 55% 45% at 50% 0%, rgba(212,165,63,.06), transparent 60%),
+    var(--obsidian);
+  text-align: center;
+}
+.intro-lead {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.intro-lead p {
+  color: #c3bcae;
+  font-weight: 300;
+  font-size: clamp(1rem, 1.7vw, 1.14rem);
+  line-height: 1.85;
+  margin-bottom: 1.3rem;
+}
+.intro-lead p:last-child { margin-bottom: 0; }
+.intro-lead strong { color: var(--gold); font-weight: 600; }
+
 /* ============ MARQUEE ============ */
 .marquee {
   overflow: hidden;
